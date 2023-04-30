@@ -18,7 +18,7 @@ bot.on("message", (msg) => {
   }
 });
 
-app.post("/register", async (req, res) => {
+app.post("/register/", async (req, res) => {
   console.log("REQUEST => ", req);
   const { categories, queryId, values } = req;
   try {
