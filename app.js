@@ -35,6 +35,7 @@ app.post("/register/", async (req, res) => {
         },
       })
     );
+    res.status(200).json({ message: "success" });
   } catch (error) {
     await bot.answerWebAppQuery(
       queryId,
@@ -47,9 +48,8 @@ app.post("/register/", async (req, res) => {
         },
       })
     );
+    res.status(400).json({ message: "success" });
   }
-
-  res.send("success");
 });
 
 app.listen(8000, () => console.log("The server is up on port 3000"));
