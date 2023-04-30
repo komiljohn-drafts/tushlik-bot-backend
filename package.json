@@ -4,7 +4,7 @@
   "description": "My first test telegram bot",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "author": "Komiljon Yormurodov",
   "license": "ISC",

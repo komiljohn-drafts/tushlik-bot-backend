@@ -18,9 +18,9 @@ bot.on("message", (msg) => {
   }
 });
 
-app.post("/register/", async (req, res) => {
+app.post("/register", async (req, res) => {
   console.log("REQUEST => ", req);
-  const { categories, queryId, values } = req;
+  const { categories, queryId, values } = req.body;
   try {
     await bot.answerWebAppQuery(
       queryId,
@@ -48,7 +48,7 @@ app.post("/register/", async (req, res) => {
         },
       })
     );
-    res.status(400).json({ message: "success" });
+    res.status(500).json({ message: "error" });
   }
 });
 
